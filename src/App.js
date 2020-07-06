@@ -1,30 +1,21 @@
 import React, { Component } from 'react'
 import './App.css';
 import Card from './components/Card/card.js'
-
-
+import DropDown from './components/DropDown/DropDown';
+import Score from './components/Score/Score.js'
+import Persons from './components/Persons/Persons.js'
 
 class App extends Component {
-  state = {
-    guess: "",
-    who:"Bob",
-  }
- 
-  handleInputChange = event => {
-    // Getting the value and name of the input which triggered the change
-    const { name, value } = event.target;
-
-    // Updating the input's state
-    this.setState({
-      [name]: value
-    });
-  };
+  
   render() {
     return (
       <div>
         <div className="columns is-centered is-multiline">
+        <DropDown />
           <Card />
+          <Score />
         </div>
+        <Persons />
       </div>
     )
   }
